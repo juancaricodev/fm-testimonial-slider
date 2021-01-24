@@ -130,6 +130,7 @@ span {
 }
 
 .slider-controls img {
+  position: relative;
   width: 10px;
   height: 15px;
 }
@@ -144,8 +145,6 @@ span {
     padding-bottom: 50px;
     justify-content: center;
     align-items: center;
-    /* padding: 50px; */
-    /* height: 100%; */
     height: 100vh;
   }
 
@@ -158,16 +157,16 @@ span {
   }
 
   .img-container {
-    /* height: 700px; */
     justify-content: center;
     height: 100%;
     width: 130%;
   }
 
   .img-container img {
-    margin-top: 23px;
-    width: 542px;
-    height: 542px;
+    position: absolute;
+    top: 9%;
+    width: 545px;
+    height: 545px;
     border-radius: 10px;
   }
 
@@ -188,5 +187,17 @@ span {
     align-items: flex-start;
     gap: 15px;
     font-size: var(--font-size-s);
+  }
+
+  .slider-controls {
+    top: 78%;
+    left: 57%;
+    width: 120px;
+    height: 60px;
+  }
+
+  .slider-controls img {
+    width: 15px;
+    height: 21px;
   }
 }
