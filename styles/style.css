@@ -20,7 +20,7 @@
   --color-dark-blue: hsl(240, 38%, 20%);
   --color-grayish-blue: hsl(240, 18%, 77%);
   --font-size: 32px;
-  --font-size-s: 27px;
+  --font-size-s: 23px;
   --font-size-mobile: 18px;
   --font-size-mobile-s: 16px;
 }
@@ -127,12 +127,14 @@ span {
   height: 40px;
   background-color: white;
   border-radius: 30px;
+  box-shadow: 2px 2px 19px -6px rgba(0, 0, 0, 0.3);
 }
 
 .slider-controls img {
   position: relative;
   width: 10px;
   height: 15px;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -171,21 +173,28 @@ span {
   }
 
   .text {
+    margin-top: -150px;
     padding-left: 100px;
-    flex-direction: column;
     align-items: flex-start;
     width: 100%;
     text-align: start;
+    background-position-x: 240px;
   }
 
   .text p {
+    z-index: 1;
+    padding-top: 42px;
+    padding-left: 48px;
+    width: 120%;
     font-size: var(--font-size);
   }
 
   .text__info {
+    padding-left: 48px;
     flex-direction: row;
     align-items: flex-start;
     gap: 15px;
+    width: 130%;
     font-size: var(--font-size-s);
   }
 
