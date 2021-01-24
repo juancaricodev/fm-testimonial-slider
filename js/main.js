@@ -1,10 +1,11 @@
 const prev = document.getElementById('prevBtn')
 const next = document.getElementById('nextBtn')
+const slider = document.querySelector('.slider')
 
 prev.addEventListener('click', () => {
-  console.log('prev button working')
+  slider.style.transform = 'translateX(0)'
 })
 
 next.addEventListener('click', () => {
-  console.log('next button working')
+  slider.style.transform = 'translateX(-50%)'
 })
