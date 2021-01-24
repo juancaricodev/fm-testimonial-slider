@@ -20,6 +20,8 @@
   --color-dark-blue: hsl(240, 38%, 20%);
   --color-grayish-blue: hsl(240, 18%, 77%);
   --font-size: 32px;
+  --font-size-mobile: 18px;
+  --font-size-mobile-s: 16px;
 }
 
 /* Global Styles */
@@ -28,7 +30,6 @@
   margin: 0;
 }
 body {
-  padding: 20px;
   font-family: 'Inter';
 }
 
@@ -42,6 +43,7 @@ main {
 }
 
 article {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,15 +56,41 @@ article {
   background-image: url('../images/pattern-bg.svg');
   background-repeat: no-repeat;
   background-size: 100%;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
+
 .img-container img {
   margin-top: 30px;
-  width: 80%;
+  width: 77%;
   border-radius: 5px;
   box-shadow: 5px 35px 50px -30px rgba(0,0,0,0.5);
   -webkit-box-shadow: 5px 35px 50px -30px rgba(0,0,0,0.5);
   -moz-box-shadow: 5px 35px 50px -30px rgba(0,0,0,0.5);
 }
 
-main article p {}
+main article p {
+  display: flex;
+  padding-top: 32px;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+  font-size: var(--font-size-mobile);
+  color: var(--color-dark-blue);
+  text-align: center;
+  background-image: url('../images/pattern-quotes.svg');
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position-x: center;
+}
+
+main article p strong {
+  margin-top: 25px;
+  font-weight: 700;
+  font-size: var(--font-size-mobile-s);
+}
+
+main article p span {
+  font-weight: 500;
+  font-size: var(--font-size-mobile-s);
+  color: var(--color-grayish-blue);
+}
