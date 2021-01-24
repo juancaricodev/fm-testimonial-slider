@@ -20,6 +20,7 @@
   --color-dark-blue: hsl(240, 38%, 20%);
   --color-grayish-blue: hsl(240, 18%, 77%);
   --font-size: 32px;
+  --font-size-s: 27px;
   --font-size-mobile: 18px;
   --font-size-mobile-s: 16px;
 }
@@ -70,43 +71,54 @@ article {
 
 .img-container img {
   margin-top: 30px;
-  height: 250px;
+  width: 250px;
+  height: 260px;
   border-radius: 5px;
   box-shadow: 5px 35px 50px -30px rgba(0,0,0,0.5);
   -webkit-box-shadow: 5px 35px 50px -30px rgba(0,0,0,0.5);
   -moz-box-shadow: 5px 35px 50px -30px rgba(0,0,0,0.5);
 }
 
-article p {
+.text {
   display: flex;
-  padding-top: 32px;
   flex-direction: column;
   align-items: center;
-  font-weight: 300;
-  font-size: var(--font-size-mobile);
-  color: var(--color-dark-blue);
+  padding-top: 32px;
   text-align: center;
+  color: var(--color-dark-blue);
   background-image: url('../images/pattern-quotes.svg');
   background-repeat: no-repeat;
   background-size: 20%;
   background-position-x: center;
+
+
 }
 
-article p strong {
+.text p {
+  font-size: var(--font-size-mobile);
+  font-weight: 300;
+}
+
+.text__info {
   margin-top: 25px;
-  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: var(--font-size-mobile-s);
 }
 
-article p span {
+strong {
+  font-weight: 700;
+}
+
+span {
   font-weight: 500;
-  font-size: var(--font-size-mobile-s);
   color: var(--color-grayish-blue);
 }
 
 .slider-controls {
   position: absolute;
-  top: 42%;
+  top: 43%;
   left: 40%;
   display: flex;
   justify-content: space-around;
@@ -120,4 +132,42 @@ article p span {
 .slider-controls img {
   width: 10px;
   height: 15px;
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    background-size: 40%;
+  }
+
+  .slider {
+    justify-content: center;
+    align-items: center;
+    /* padding: 50px; */
+    height: 100%;
+  }
+
+  article {
+    padding: 100px;
+    flex-direction: row-reverse;
+    height: 100%;
+  }
+
+  .text {
+    padding-left: 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    text-align: start;
+  }
+
+  .text p {
+    font-size: var(--font-size);
+  }
+
+  .text__info {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    font-size: var(--font-size-s);
+  }
 }
