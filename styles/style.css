@@ -23,6 +23,9 @@
   --font-size-s: 23px;
   --font-size-mobile: 18px;
   --font-size-mobile-s: 16px;
+  --photo-size-mobile: 250px;
+  --photo-size-x: 18%;
+  --photo-size-y: 63%;
 }
 
 /* Global Styles */
@@ -167,8 +170,8 @@ span {
   .img-container img {
     position: absolute;
     top: 9%;
-    width: 545px;
-    height: 545px;
+    width: var(--photo-size-x);
+    height: var(--photo-size-y);
     border-radius: 10px;
   }
 
@@ -199,7 +202,7 @@ span {
   }
 
   .slider-controls {
-    top: 78%;
+    top: 81%;
     left: 57%;
     width: 120px;
     height: 60px;
